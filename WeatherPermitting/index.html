@@ -1,0 +1,1198 @@
+<!doctype html>
+<html>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Final Project - Home Page</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="jquery-2.1.1.js"></script>
+	<script src="jquery.simpleWeather.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    
+    
+</head>
+
+	<script> 
+	
+	var xml;
+		$(document).ready(function () {  
+	
+			xml = '<outifts>' + 
+  '<outfit>'+
+    '<filename>Bottoms_37.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Shorts</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_38.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Shorts</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_40.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Black</color>'+
+    '<season>Spring</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Pants</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_41.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Pants</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_42.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Tan</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Pants</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_43.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Leggings</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_44.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Spring</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Capris</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_45.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Jeans</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_46.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Red</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Skirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_47.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>White</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Skirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_48.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Yoga</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_49.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Blue</color>'+
+    '<season>Spring</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Spandex</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_50.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Black</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Shorts</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_51.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Blue</color>'+
+    '<season>Winter</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Sweats</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_52.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Grey</color>'+
+    '<season>Winter</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Sweats</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_54.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Jeans</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_55.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Green</color>'+
+    '<season>Winter</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Sweats</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_56.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Blue</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Shorts</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_57.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Grey</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Shorts</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_58.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Brown</color>'+
+    '<season>Summer</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Shotrs</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Bottoms_59.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>All</season>'+
+    '<classification>Bottoms</classification>'+
+    '<type>Jeans</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+  
+  '<outfit>' +
+   '<filename>Shirts_01.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>White</color>'+
+    '<season>Spring</season>'+
+    '<classification>Top</classification>'+
+    '<type>Shirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_02.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Vest</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_03.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>Winter</season>'+
+    '<classification>Top</classification>'+
+    '<type>Cardigan</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Fall</season2>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_04.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Grey</color>'+
+    '<season>Winter</season>'+
+    '<classification>Top</classification>'+
+    '<type>Sweater</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_05.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Vest</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_06.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Vest</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_07.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Shirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_08.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Blue<color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Shirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_09.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Longsleeve</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_10.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tshirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_11.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tshirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_12.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tshirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_13.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>Spring</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tshirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_14.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>Spring</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tshirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_15.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Red</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Longsleeve</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_18.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Blue</color>'+
+    '<season>Winter</season>'+
+    '<classification>Top</classification>'+
+    '<type>Blazer</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_19.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Blazer</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_23.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Jacket</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_24.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Sweatshirt</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_25.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Sweatshirt</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_27.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Grey</color>'+
+    '<season>Winter</season>'+
+    '<classification>Top</classification>'+
+    '<type>Jacket</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_28.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Longsleeve</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+	'<season2>Winter</season2>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_29.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Yellow</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tshirt</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_30.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Shortsleeve</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_31.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Pink</color>'+
+    '<season>All</season>'+
+    '<classification>Top</classification>'+
+    '<type>Shortsleeve</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_32.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Fall</season>'+
+    '<classification>Top</classification>'+
+    '<type>Longsleeve</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Winter</season2>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_33.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>White</color>'+
+    '<season>Summer</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tanktop</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_34.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Green</color>'+
+    '<season>Summer</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tanktop</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<style2>Athletic</style2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_35.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>White</color>'+
+    '<season>Summer</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tanktop</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shirts_36.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Summer</season>'+
+    '<classification>Top</classification>'+
+    '<type>Tanktop</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shirts_37.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Purple</color>'+
+    '<season>Winter</season>'+
+    '<classification>Top</classification>'+
+    '<type>Sweathsirt</type>'+
+    '<layer>Second</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Fall</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_54.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Black</color>'+
+    '<season>Fall</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Boots</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_55.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Brown</color>'+
+    '<season>Fall</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Boots</type>'+
+    '<layer>First</layer>'+
+	'<pattern>Yes</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_56.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Brown</color>'+
+    '<season>Summer</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sandals</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+   '<outfit>'+
+    '<filename>Shoes_57.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>All</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sneakers</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_58.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Brown</color>'+
+    '<season>Summer</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sandals</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_59.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Brown</color>'+
+    '<season>Summer</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sandals</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+	'<season2>Spring</season2>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_60.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>All</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Flats</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_61.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>All</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Heels</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_62.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Blue</color>'+
+    '<season>Summer</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Flip Flops</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_63.JPG</filename>'+
+    '<style>Athletic</style>'+
+    '<color>Grey</color>'+
+    '<season>All</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sneakers</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_63.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Black</color>'+
+    '<season>Winter</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Boots</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_65.JPG</filename>'+
+    '<style>Formal</style>'+
+    '<color>Black</color>'+
+    '<season>Summer</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sandals</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_66.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Brown</color>'+
+    '<season>Summer</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Sandals</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+  '<outfit>'+
+    '<filename>Shoes_67.JPG</filename>'+
+    '<style>Casual</style>'+
+    '<color>Brown</color>'+
+    '<season>Winter</season>'+
+    '<classification>Shoes</classification>'+
+    '<type>Boots</type>'+
+    '<layer>First</layer>'+
+	'<pattern>No</pattern>'+
+  '</outfit>'+
+'</outfits>'; 
+
+			
+			//this is setting up which buttons appear on page load and what not
+			$('#outfit1').hide();
+			$('#outfit2').hide();
+			$('#outfit3').hide();
+			$('#newOutfitsButton').hide();
+			$('#text').hide();
+			$('.subText').show();
+			$('.subText2').show();
+			$('.preferences').show();
+			$('.checkButton').hide();
+			$('#checkButton1').hide();
+			$('#checkButton2').hide();
+			$('#checkButton3').hide();
+		
+		$('#outfitsButton').click(function() {
+			$(this).hide();
+			document.getElementById("mainBox").style.backgroundImage ='none';
+			var val = getRadioVal(document.getElementById('prefForm'),'style');
+			xmlParser(xml, temp, currentSeason, val);
+			console.log(currentSeason);
+			$('#outfit1').show();
+			$('#outfit2').show();
+			$('#outfit3').show();
+			$('#newOutfitsButton').show();
+			$('#text').show();
+			$('.subText').hide();
+			$('.subText2').hide();
+			$('.preferences').hide();
+			$('.checkButton').show();
+			$('#style').hide();
+			$('#checkButton1').show();
+			$('#checkButton2').show();
+			$('#checkButton3').show();
+		});	
+		
+			$('#newOutfitsButton').click(function() {
+				xmlParser(xml, temp, currentSeason);
+		
+			});	
+			
+			$('#checkButton1').click(function() {
+			alert("You're going to look great in outfit 1 today!");
+			});	
+			
+			$('#checkButton2').click(function() {
+			alert("Choosing outfit 2 is a good choice to start your day!");
+			});	
+			
+			$('#checkButton3').click(function() {
+			alert("Great pick! Outfit 3 is fabulous!");
+			});	
+		});
+		
+	
+		//array that all the items classified as fall will be saved into 
+		var seasonArray = new Array();
+		var i =0;
+
+		//takes in the xml as a parameter and parses it, saves into corresponding arrays and so on
+		function xmlParser(xml, temp, currentSeason, pref) {
+		
+			//loops through xml file once
+			$(xml).find("outfit").each(function () {
+				
+				//gets attributes and saves into following variables
+				filename = $(this).find("filename").text();
+				style = $(this).find("style").text();
+				color = $(this).find("color").text();
+				season = $(this).find("season").text();
+				classification = $(this).find("classification").text();
+				type = $(this).find("type").text();
+				layer = $(this).find("layer").text();
+				season2 = $(this).find("season2").text();
+				style2 = $(this).find("style2").text();
+		
+				//checks the season attribute and if true, create item array and save each attribute in item array
+				//so each item array represents one piece of clothing
+				// each entry in the season array is an item array
+				
+				if(season == currentSeason || season == "All" || season2 == currentSeason) {
+					//want to save these entries in an array
+					var item = new Array();
+					
+					item[0] = filename;
+					item[1] = style;
+					item[2] = color;
+					item[3] = season;
+					item[4] = classification;
+					item[5] = type;
+					item[6] = layer;
+					item[7] = season2;
+					item[8] = style2;
+		
+					seasonArray [i] = item;
+					i++;
+				}
+			});
+			
+			
+			//Now filtering by style 
+			//create the tempArray 
+			var tempArray = new Array();
+			var j, k, m;
+			m=0;
+			var styleArray = new Array();
+			
+			//loop through the entries of season array and save each item array into the temp array
+			//So tempArray is the item array saved in the season array spot the for loop is currently on
+			
+			for(j = 0; j < seasonArray.length; j++){
+				tempArray = seasonArray[j];
+
+				//If the style is equal to Casual (casual is hardcoded for now, need to make this the preference chosen by user)
+				//then save the tempArray as an entry in styleArray
+				//So similar to seasonArray, each entry in styleArray is an array of attributes for one piece of clothing 
+				
+				if(tempArray[1] == pref || tempArray[8] == pref){
+					styleArray[m] = seasonArray[j];
+					m++;
+					
+				}
+				
+			}
+			
+			getTops(styleArray, currentSeason);
+			getBottoms(styleArray, currentSeason);
+			getShoes(styleArray, currentSeason);
+		}
+		
+		
+		
+		var topArray = new Array();
+		var selectedFirstTop = new Array();
+		var selectedSecondTop = new Array();
+		
+		function getTops(styleArray, season) {
+			var tempArray = new Array();
+			var tempArray2 = new Array();
+			var tempArray3 = new Array();
+			var tempArray4 = new Array();
+			var firstLayer = new Array();
+			var secondLayer = new Array();
+			var j, k;
+			var m =0;
+			var n = 0;
+			var p = 0;
+			var r = 0;
+			
+			for(j = 0; j < styleArray.length; j++){
+				tempArray = styleArray[j];
+				//console.log("tempArray : " + tempArray);
+				
+				//If the classification is equal to top 
+				//then save the tempArray as an entry in topArray
+				//So similar to seasonArray, each entry in topArray is an array of attributes for one piece of clothing 
+				if(tempArray[4] == "Top"){
+					topArray[m] = styleArray[j];
+					m++;
+				}
+			}
+			
+			for(k=0; k < topArray.length; k++){
+				tempArray2 = topArray[k];
+				if(tempArray2[6] == "First"){
+					firstLayer[n] = topArray[k];
+					n++;
+				}
+				
+				if(tempArray2[6] == "Second")
+				{
+					secondLayer[p] = topArray[k];
+					p++;
+				}
+				
+			}
+			
+			max = firstLayer.length - 1;
+			min = 0;
+					
+			for(s = 0; s < 3; s++){
+				//randomly choose a first layer shirt, save into array selectedtTop, this is the final first layer shirt
+				randomInt = Math.floor(Math.random()*(max-min+1)+min);
+				
+				tempArray3 = firstLayer[randomInt];
+				topFilename = tempArray3[0]
+				selectedFirstTop[s] = topFilename
+			}
+			
+		
+			// going to pick a second layer here, don't know how to make sure it matches first layer though........
+			if(season == "Winter" || season == "Fall") {
+				max1 = secondLayer.length - 1;
+				min1 = 0;
+				
+				for(s = 0; s<3; s++){
+			
+				randomInt1 = Math.floor(Math.random()*(max1-min1+1)+min1);
+				
+				tempArray4 = secondLayer[randomInt1];
+				topSecondFilename = tempArray4[0];
+				selectedSecondTop[s] = topSecondFilename;
+				}
+			}
+		}
+		
+		
+		
+		
+		var bottomArray = new Array();
+		var selectedBottom = new Array();
+		
+		function getBottoms(styleArray, season) {
+			var tempArray = new Array();
+			var tempArray2 = new Array();
+			var m = 0;
+	
+			for(j = 0; j < styleArray.length; j++){
+				tempArray = styleArray[j];
+				
+				//If the classification is equal to bottom 
+				//then save the tempArray as an entry in bottomArray
+				//So similar to seasonArray, each entry in bottomArray is an array of attributes for one piece of clothing 
+				if(tempArray[4] == "Bottoms"){
+					bottomArray[m] = styleArray[j];
+					m++;
+				}
+			}
+			
+			max = bottomArray.length - 1;
+			min = 0;
+			
+			for(s=0; s<3; s++){	
+				//randomly choose a bottom, save into array selectedBottom, this is the final Bototm
+				randomInt = Math.floor(Math.random()*(max-min+1)+min);
+				
+				tempArray2 = bottomArray[randomInt];
+				bottomFilename = tempArray2[0];
+				selectedBottom[s] = bottomFilename;
+			}
+		}
+	
+	
+	
+	
+		var shoeArray = new Array();
+		var selectedShoes = new Array();
+		
+		function getShoes(styleArray, season) {
+			var tempArray = new Array();
+			var tempArray2 = new Array();
+			var m = 0;
+	
+			
+			for(j = 0; j < styleArray.length; j++){
+				tempArray = styleArray[j];
+				
+				//If the classification is equal to shoes 
+				//then save the tempArray as an entry in shoesArray
+				//So similar to seasonArray, each entry in shoesArray is an array of attributes for one piece of clothing 
+				if(tempArray[4] == "Shoes"){
+					shoeArray[m] = styleArray[j];
+					m++;
+				}
+			}
+			
+			max = shoeArray.length - 1;
+			min = 0;
+				
+			for(s = 0; s<3; s++){
+				randomInt = Math.floor(Math.random()*(max-min+1)+min);
+				
+				tempArray2 = shoeArray[randomInt];
+				shoeFilename = tempArray2[0];
+				selectedShoes[s] = shoeFilename;
+			}
+			
+			showPicture(season);
+		}
+	
+	
+	
+	
+		var city = "Los Angeles";
+		var state = "CA";
+		var html;	
+		var seasonVar;
+		
+	
+		function createOutfit(temp,current) {
+
+			if(temp <= 45){
+				seasonVar = "Winter";
+			}
+			else if((temp > 45) && (temp <= 60)){
+				seasonVar = "Fall";
+			}
+			else if((temp > 60) && (temp <= 75)){
+				seasonVar = "Spring";
+			}
+			else {
+				seasonVar = "Summer";
+			}
+			return(seasonVar);
+		}
+		
+		
+	  var currentSeason;
+	  var temp;
+	  
+	  $.simpleWeather({
+		location: city + ", " + state
+		,
+		woeid: '',
+		unit: 'f',
+		success: function(weather) {
+		  
+		  
+		  currentSeason = createOutfit(weather.temp,weather.currently);
+		  temp = weather.temp;
+		  setBackground(weather.currently);
+		  var currentWeatherCondition = weather.currently;
+		  if(weather.currently == "Light Snow Shower"){
+			
+			currentWeatherCondition = "Light Snow";
+		  }
+		  console.log(currentWeatherCondition);
+		  html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+' - '+currentWeatherCondition+' - '+weather.city+', '+weather.region+'</h2>';
+		  $("#weather").html(html);
+		},
+		error: function(error) {
+		  $("#weather").html('<p>'+error+'</p>');
+		}
+	  });
+	  
+	  function setBackground(currently) {
+		  currentLower = currently.toLowerCase();
+		  
+		  if (currentLower.indexOf("sun") >= 0) {
+			    document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/sunCopy.jpg')";
+
+		  }
+		  else if (currentLower.indexOf("cloud") >= 0) {
+				document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/cloudyCopy.jpg')";
+		  }
+		  else if (currentLower.indexOf("fair") >= 0) {
+				document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/fairCopy.jpg')";
+		  }
+		  else if (currentLower.indexOf("rain") >= 0) {
+		  		document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/rainCopy.jpg')";
+		  }
+		  else if (currentLower.indexOf("snow") >= 0){ 
+		  		document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/snowCopy.jpg')";
+		  }
+		  else if (currentLower.indexOf("thunder") >= 0) { 
+		  		document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/thunderCopy.jpg')";
+		  }
+		  else {
+			document.getElementById("mainBox").style.backgroundImage =  "url('assets/weatherImages/closetpicCopy3.jpg')";
+		  }
+	  	
+	  }
+	  
+	  
+	  function showPicture(season) {
+	  
+		 var picture = document.getElementById("o1pic1");
+			picture.src = "assets/closet/" + selectedFirstTop[0];
+			
+		 if(season == "Winter" || season == "Fall"){	
+			 var picture = document.getElementById("o1pic2");
+				picture.src = "assets/closet/" + selectedSecondTop[0];
+		}
+		else{
+			$('#o1pic2').hide();
+		}
+		 var picture = document.getElementById("o1pic3");
+			picture.src = "assets/closet/" + selectedBottom[0];
+		 var picture = document.getElementById("o1pic4");
+			picture.src = "assets/closet/" + selectedShoes[0];
+			
+			
+		var picture = document.getElementById("o2pic1");
+			picture.src = "assets/closet/" + selectedFirstTop[1];
+		if(season == "Winter" || season == "Fall"){	
+			 var picture = document.getElementById("o2pic2");
+				picture.src = "assets/closet/" + selectedSecondTop[1];
+		}
+		else{
+			$('#o2pic2').hide();
+		}
+		 var picture = document.getElementById("o2pic3");
+			picture.src = "assets/closet/" + selectedBottom[1];
+		 var picture = document.getElementById("o2pic4");
+			picture.src = "assets/closet/" + selectedShoes[1];
+		  
+		  
+		 var picture = document.getElementById("o3pic1");
+			picture.src = "assets/closet/" + selectedFirstTop[2];
+		if(season == "Winter" || season == "Fall"){	
+			 var picture = document.getElementById("o3pic2");
+				picture.src = "assets/closet/" + selectedSecondTop[2];
+		}
+		else{
+			$('#o3pic2').hide();
+		}
+		 var picture = document.getElementById("o3pic3");
+			picture.src = "assets/closet/" + selectedBottom[2];
+		 var picture = document.getElementById("o3pic4");
+			picture.src = "assets/closet/" + selectedShoes[2];
+	  }
+	  
+	  function getRadioVal (form, name) {
+		  var val; 
+		  var radios = form.elements[name];
+		  for (var j=0, len=radios.length; j<len; j++) {
+			  if (radios[j].checked) {
+				  val = radios[j].value;
+				  break;
+			  }
+		  }
+		  return val;
+	  }
+			
+	</script>
+
+<body>
+	<div id="screen">
+    	<div id="icon">
+        	 <img src="assets/icon.png" alt="wp icon" id="iconimg" width="90px"/> 
+        </div>
+    	<div id="weather">
+        </div>
+    	<div id="menu"> 
+        	<input type="button" name="home" onclick="location.href='index.html'" id="menuButtonL" value="Home"/>
+            <input type="button" name="your closet" onclick="location.href='closet.html'" id="menuButton" value="Your Closet"/>
+            <input type="button" name="log out" onclick="location.href='logout.html'" id="menuButton" value="Log Out"/>
+        </div>
+        
+		<div id="mainBox"> 
+        	<div id="style">
+
+        	<input type="button" name="get outfits" id="outfitsButton" value="Find Outfits"/>
+             
+             <div class="subText"> Style Preferences </div>
+             <div class="preferences">
+             	<form id="prefForm">
+           		 <input type="radio" name="style" value="Athletic" checked>Athletic
+            	 <input type="radio" name="style" value="Casual" checked>Casual
+            	 <input type="radio" name="style" value="Formal" checked>Formal
+                 </form>
+                 </div>
+             </div>
+             
+             <div id="outfit1">
+             	<img src="assets/floor.JPG" alt="first layer" id="o1pic1" width="100%"/> 
+                <img src="assets/floor.JPG" alt="second layer" id="o1pic2" width="100%"/>
+                <img src="assets/floor.JPG" alt="bottoms" id="o1pic3" width="100%"/>
+                <img src="assets/floor.JPG" alt="shoes" id="o1pic4" width="100%"/>
+             </div>
+                          
+             <div id="outfit2">
+             	<img src="assets/floor.JPG" alt="first layer" id="o2pic1" width="100%"/>
+                <img src="assets/floor.JPG" alt="second layer" id="o2pic2" width="100%"/>
+                <img src="assets/floor.JPG" alt="bottoms" id="o2pic3" width="100%"/>
+                <img src="assets/floor.JPG" alt="shoes" id="o2pic4" width="100%"/>
+             </div>
+             
+             <div id="outfit3">
+             	<img src="assets/floor.JPG" alt="first layer" id="o3pic1" width="100%"/>
+                <img src="assets/floor.JPG" alt="second layer" id="o3pic2" width="100%"/>
+                <img src="assets/floor.JPG" alt="bottoms" id="o3pic3" width="100%"/>
+                <img src="assets/floor.JPG" alt="shoes" id="o3pic4" width="100%"/>
+             </div>
+             
+             <div id='text'> 
+             <p> Scroll over each outfit to see all the components. <br> <br> If you select an outfit for the day, click the corresponding check button. </p> 
+             </div>
+              <input type="button" name="get outfits" id="newOutfitsButton" value="Find New Outfits"/>
+             
+            <input type="button" name="get outfits" id="checkButton1" class="checkButton" value="Choose Outfit 1"/>
+        	<input type="button" name="get outfits" id="checkButton2" class="checkButton" value="Choose Outfit 2"/>
+        	<input type="button" name="get outfits" id="checkButton3" class="checkButton" value="Choose Outfit 3"/>
+       	
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

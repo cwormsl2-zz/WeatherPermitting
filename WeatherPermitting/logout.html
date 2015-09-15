@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Final Project - Log Out</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="jquery-2.1.1.js"></script>
+	<script src="jquery.simpleWeather.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    
+</head>
+
+<script>
+
+	$(document).ready(function(){
+		$('#accountButton').click(function(){
+			alert("Redirecting to 'Create Account' page");
+		});
+	});
+	
+</script>
+
+
+
+<body>
+	<div id="screen">
+    	<div id="logoutBox">
+        	<div id="title">
+            	<img src="assets/logo.png" alt="logo" width="30%"/>
+            </div>
+            <div id="login">
+            	<form id="form1">
+					Username: 
+					<input type="text" name="firstname"> <br> <br>
+					Password: 
+					<input type="text" name="lastname">
+                    <input type="button" name="login" onclick="location.href='index.html'" id="loginButton" value="Log-in"/>
+                    <input type="button" name="account" id="accountButton" value="New Account"/>
+				
+                </form>
+            	
+            </div>
+    	</div>
+   </div>
+</body>
+</html>
